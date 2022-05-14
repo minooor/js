@@ -1,0 +1,11 @@
+h2 span {
+    font-size: 1rem;
+}
+.timer {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.timer span {
+    font-size: 72px;
+}
