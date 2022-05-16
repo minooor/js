@@ -9,3 +9,5 @@ while(enemy > 0) {
   count += 1;
 }
 console.log(count + '回でモンスターを倒した！');
+
+document.getElementById('output').textContent = count + '回でモンスターを倒した！';
