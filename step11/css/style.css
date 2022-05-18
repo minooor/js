@@ -1,0 +1,186 @@
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body *, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+    background-color: #1aaedb;
+    border-bottom: #ead963 6px solid;
+}
+
+.header {
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container {
+    min-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 76px;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 53px;
+    background-position: 16px 10px;
+}
+
+header .container h1,
+header .container h2 {
+    margin: 0;
+    color: #fff;
+    line-height: 1;
+}
+
+header .container h1 {
+    padding: 15px 0 4px 0;
+    border-bottom: 1px dotted #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .container h2 {
+    padding: 5px 0 0 0;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.title-block {
+  flex: 1 1 auto;
+}
+
+.hamburger {
+  flex: 0 0 32px;
+  align-self: center;
+  margin-left: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+    min-height: calc(100% - 156px);
+}
+
+main .container {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+}
+
+.key {
+    width: 100%;
+}
+
+.content {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.archive {
+    margin: 40px 0 0;
+    padding: 0 30px;
+}
+.archive-box {
+    margin: 0 auto;
+    width: 320px;
+}
+.archive h3 {
+    border-top: 1px dashed #809BA6;
+    border-bottom: 1px dashed #809BA6;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.archive figure {
+    margin: 0 0 2em 0;
+    padding: 0;
+    max-width: 320px;
+}
+.archive figcaption {
+    text-align: center;
+}
+
+.thumb {
+    max-width: 320px;
+}
+
+footer {
+    background-color: #1aaedb;
+}
+
+footer .container {
+    min-height: 50px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+}
+
+/*ドロワーナビゲーションの必須スタイル*/
+#nav {
+  position: fixed;
+  right: -270px;
+  top: 0;
+  width: 270px;
+  height: 100%;
+}
+
+/*ドロワーが開かれた時のスタイル*/
+.show {
+  transform: translate3d(-270px, 0 , 0);
+}
+
+/* 開く・閉じるアニメーション */
+#wrapper, #nav {
+  transition: transform 0.3s;
+}
+
+/* メニュー */
+#nav {
+    padding: 24px 24px 0 24px;
+    background: #000;
+    color: white;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav li a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #114d60;
+    text-decoration: none;
+    color: #fff;
+}
+#nav li a:hover {
+    background: #0e3e4d;
+}
+#nav .logo {
+    margin-bottom: 20px;
+}
