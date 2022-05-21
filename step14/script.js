@@ -1,24 +1,21 @@
-const child = document.querySelector('.child')
+document.addEventListener('DOMContentLoaded', function () {
 
-const cb = function(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      console.log('inview');
-      entry.target.classList.add('inview');
-    } else {
-      console.log('out view');
-      entry.target.classList.remove('inview');
-    }
-  });
-  //alert('intersecting');
-}
-
-const options = {
-  //交差判定
-  root: null,
-  rootMargin: "-300px 0px",
-  threshold: [0, 0.5, 1]
-};
-
-const io = new IntersectionObserver(cb, options);
-io.observe(child);
+  const els = document.querySelectorAll('.animate-title');
+  const cb = function(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const ta = new TextAnimation(entry.target);
+        ta.animate();
+        observer.unobserve(entry.target);
+      } else {
+      }
+    });
+  };
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0
+  };
+  const io = new IntersectionObserver(cb, options);
+  els.forEach(el => io.observe(el));
+});
